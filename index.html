@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pickleball Blessing Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Pickleball Verse Generator</h1>
+    
+    <!-- Input Section -->
+    <div class="input-group">
+      <label for="gender">Select Gender:</label>
+      <select id="gender">
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+      </select>
+    </div>
+
+    <div class="input-group">
+      <label>Your Photo:</label>
+      <input type="file" id="imageInput" accept="image/*">
+      <p>OR</p>
+      <video id="webcam" autoplay playsinline width="200" height="150"></video>
+      <button id="snapBtn">Take Selfie</button>
+    </div>
+
+    <button id="generateBtn" onclick="generateCard()">Generate Card</button>
+
+    <!-- Canvas output -->
+    <div class="output">
+      <canvas id="cardCanvas" width="600" height="600"></canvas>
+    </div>
+
+    <!-- Share Button -->
+    <button id="shareBtn" style="display:none;" onclick="shareToFacebook()">Share to Facebook</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
